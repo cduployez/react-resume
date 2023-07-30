@@ -1,0 +1,74 @@
+# Default values for helm-chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+reactResume:
+  # Names
+  nameOverride: "react-resume"
+  fullnameOverride: "react-resume"
+
+  # Force redeployment
+  forceRedeployment: true
+
+  # Replicas
+  replicaCount: 1
+
+  # Images
+  image:
+    repository: europe-west9-docker.pkg.dev/back-resume/resume-repository/react-resume
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: "latest"
+
+  ingress:
+    className: nginx
+    path: "/react-resume"
+
+  certificate:
+    issuerName: letsencrypt-production
+
+  configMap:
+    avatarUrl: "https://avatars1.githubusercontent.com/u/60548405?s=460&v=4"
+    backResumeUrl: "https://clement.duployez.fr/back-resume"
+    linkedInUrl: "https://www.linkedin.com/in/clementduployez/"
+    githubUrl: "https://github.com/cduployez/react-resume"
+    pdfDownloadUrl: "https://www.dropbox.com/s/4mzxkjmmnpxmu43/CV%20Cl%C3%A9ment%20Duployez%202023%20Linkedin.pdf?dl=1"
+    latestRevisionYear: 2023
+
+  # Service
+  service:
+    http:
+      name: http
+      port: 80
+    https:
+      name: https
+      port: 443
+    containerPort: 80
+
+  # Host
+  host: clement.duployez.fr
+
+  # Resources
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+      ephemeral_storage: 128Mi
+    limits:
+      cpu: 100m
+      memory: 128Mi
+      ephemeral_storage: 128Mi
+
+  # Autoscaling
+  autoscaling:
+    enabled: false
+    minReplicas: 1
+    maxReplicas: 2
+    targetCPUUtilizationPercentage: 80
+
+
+
+
+
+
+
