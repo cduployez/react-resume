@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "helm-chart.react-resume.fullname" . }}
+  labels:
+    {{- include "helm-chart.react-resume.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    {{- include "helm-chart.react-resume.selectorLabels" . | nindent 4 }}
+  ports:
+  - port: {{ .Values.reactResume.service.http.port }}
+    targetPort: {{ .Values.reactResume.service.containerPort }}
+    protocol: TCP
+    name: {{ .Values.reactResume.service.http.name }}
+  - port: {{ .Values.reactResume.service.https.port }}
+    targetPort: {{ .Values.reactResume.service.containerPort }}
+    protocol: TCP
+    name: {{ .Values.reactResume.service.https.name }}

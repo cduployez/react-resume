@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "helm-chart.react-resume.fullname" . }}
+  labels:
+    {{- include "helm-chart.react-resume.labels" . | nindent 4 }}
+data:
+  BASE_HREF: {{ .Values.reactResume.ingress.path }}
+  config.json: |
+    {
+      "avatarUrl": "{{ .Values.reactResume.configMap.avatarUrl }}",
+      "backResumeUrl": "{{ .Values.reactResume.configMap.backResumeUrl }}",
+      "linkedInUrl": "{{ .Values.reactResume.configMap.linkedInUrl }}",
+      "githubUrl": "{{ .Values.reactResume.configMap.githubUrl }}",
+      "pdfDownloadUrl": "{{ .Values.reactResume.configMap.pdfDownloadUrl }}",
+      "latestRevisionYear": {{ .Values.reactResume.configMap.latestRevisionYear }}
+    }
+---

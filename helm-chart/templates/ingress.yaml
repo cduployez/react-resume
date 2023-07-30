@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "helm-chart.react-resume.fullname" . }}
+  labels:
+    {{- include "helm-chart.react-resume.labels" . | nindent 4 }}
+  annotations:
+    # Ingress controller name to be configured by this ingress
+    kubernetes.io/ingress.class: {{ .Values.reactResume.ingress.className }}
+    # If root path is accessed, redirect to react-resume app
+    nginx.ingress.kubernetes.io/app-root: {{ .Values.reactResume.ingress.path }}
+    # Maintain sub paths
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    # Redirect to https
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    # Certificate issuer
+    cert-manager.io/issuer: {{ .Values.reactResume.certificate.issuerName }}
+spec:
+  tls:
+  - hosts:
+    - {{ .Values.reactResume.host }}
+    secretName: {{ include "helm-chart.react-resume.fullname" . }}-tls
+  rules:
+    - host: {{ .Values.reactResume.host }}
+      http:
+        paths:
+          - path: {{ .Values.reactResume.ingress.path }}(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: {{ include "helm-chart.react-resume.fullname" . }}
+                port:
+                  number: {{ .Values.reactResume.service.http.port }}

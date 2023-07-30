@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "helm-chart.react-resume.fullname" . }}
+  labels:
+    {{- include "helm-chart.react-resume.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.reactResume.autoscaling.enabled }}
+  replicas: {{ .Values.reactResume.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "helm-chart.react-resume.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      annotations:
+        {{- if .Values.reactResume.forceRedeployment }}
+        rollme: {{ randAlphaNum 5 | quote }}
+        {{- end }}
+      labels:
+        {{- include "helm-chart.react-resume.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.reactResume.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+      - name: {{ .Chart.Name }}
+        # Replace $LOCATION with your Artifact Registry location (e.g., us-west1).
+        # Replace $GCLOUD_PROJECT with your project ID.
+        # image: $LOCATION-docker.pkg.dev/$GCLOUD_PROJECT/hello-repo/helloworld-gke:latest
+        image: "{{ .Values.reactResume.image.repository }}:{{ .Values.reactResume.image.tag | default .Chart.AppVersion }}"
+        ports:
+          - name: {{ .Values.reactResume.service.http.name }}
+            containerPort: {{ .Values.reactResume.service.containerPort }}
+            protocol: TCP
+        livenessProbe:
+          tcpSocket:
+            port: {{ .Values.reactResume.service.http.name }} # Live when web server is running
+          initialDelaySeconds: 5 # Wait 5s before starting to probe
+          periodSeconds: 20 # Perform probe every 20 seconds
+        readinessProbe:
+          httpGet:
+            path: / # Ready to accept connection when home page is serving
+            port: {{ .Values.reactResume.service.http.name }}
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          failureThreshold: 3 # Must not fail more than 3 times
+        envFrom:
+          - configMapRef:
+              name: {{ include "helm-chart.react-resume.fullname" . }}
+        volumeMounts:
+          - name: config-json
+            mountPath: /usr/share/nginx/html/assets/config/config.json
+            subPath: config.json
+            readOnly: true
+        resources:
+          requests:
+            memory: {{ .Values.reactResume.resources.requests.memory }}
+            cpu: {{ .Values.reactResume.resources.requests.cpu }}
+            ephemeral-storage: {{ .Values.reactResume.resources.requests.ephemeral_storage }}
+          limits:
+            memory: {{ .Values.reactResume.resources.limits.memory }}
+            cpu: {{ .Values.reactResume.resources.limits.cpu }}
+            ephemeral-storage: {{ .Values.reactResume.resources.limits.ephemeral_storage }}
+      volumes:
+        - name: config-json
+          configMap:
+            name: {{ include "helm-chart.react-resume.fullname" . }}
+            items:
+              - key: config.json
+                path: config.json
+---
