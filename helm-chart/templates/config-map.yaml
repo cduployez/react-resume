@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "helm-chart.react-resume.labels" . | nindent 4 }}
 data:
-  BASE_HREF: {{ .Values.reactResume.ingress.path }}
+  PUBLIC_URL: {{ .Values.reactResume.ingress.path }}
   config.json: |
     {
       "avatarUrl": "{{ .Values.reactResume.configMap.avatarUrl }}",
