@@ -1,0 +1,26 @@
+@use 'variables/variables';
+@use 'variables/theme-variables';
+
+@import 'fonts/font-gudea';
+@import 'themes/themes';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: variables.$font-family;
+  margin: 0;
+  padding: 0;
+  background-color: theme-variables.$background;
+  transition: variables.$transition-delay;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
