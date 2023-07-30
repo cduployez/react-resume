@@ -1,0 +1,12 @@
+---
+version: "3.9"
+
+services:
+  react-resume:
+    container_name: react-resume
+    build: ../
+    image: react-resume
+    ports:
+      - 11002:80
+    environment:
+      - BASE_HREF=
