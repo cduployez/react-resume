@@ -1,0 +1,97 @@
+@use '../variables/color-variables';
+
+.light-theme {
+  /* Primary */
+  --primary: #{color-variables.$blue};
+  --on-primary: #{color-variables.$white};
+
+  /* Secondary */
+  --secondary: #{color-variables.$blue-gray-500};
+  --on-secondary: #{color-variables.$white};
+
+  /* Background */
+  --background: #{color-variables.$white};
+  --on-background: #{color-variables.$black};
+
+  /* Navbar */
+  --navbar: #f5f5f5;
+  --on-navbar: #{color-variables.$blue-gray-500};
+  --navbar-shadow: rgba(110, 110, 110, 0.5);
+
+  /* Banner */
+  --banner: #{color-variables.$light-blue};
+  --on-banner: #{color-variables.$blue};
+
+  /* Footer */
+  --on-footer: #{color-variables.$light-blue};
+
+  /* Badge */
+  --badge: #{color-variables.$white};
+  --on-badge: #{color-variables.$blue-gray-300};
+
+  /* Icon */
+  --icon: #{color-variables.$blue};
+  --on-icon: #{color-variables.$white};
+  --icon-hover: #{color-variables.$white};
+  --on-icon-hover: #{color-variables.$black};
+  --on-icon-inner: #{color-variables.$blue};
+
+  /* Applications */
+  --github: #{color-variables.$black};
+  --linkedin: #{color-variables.$linkedIn};
+  --pdf: #{color-variables.$pdf};
+  --theme-button: #{color-variables.$yellow};
+
+  /* Skills */
+  // Java
+  --on-java: #{color-variables.$on-java};
+  --java: #{color-variables.$java};
+  // C++
+  --on-cplusplus: #{color-variables.$on-cplusplus};
+  --cplusplus: #{color-variables.$cplusplus};
+  // C#
+  --on-csharp: #{color-variables.$on-csharp};
+  --csharp: #{color-variables.$csharp};
+  // Spring Framework
+  --on-spring: #{color-variables.$on-spring};
+  --spring: #{color-variables.$spring};
+  // Angular
+  --on-angular: #{color-variables.$on-angular};
+  --angular: #{color-variables.$angular};
+  // Python
+  --on-python: #{color-variables.$on-python};
+  --python: #{color-variables.$python};
+  // Android
+  --on-android: #{color-variables.$on-android};
+  --android: #{color-variables.$android};
+  // HTML
+  --on-html: #{color-variables.$on-html};
+  --html: #{color-variables.$html};
+  // CSS
+  --on-css: #{color-variables.$on-css};
+  --css: #{color-variables.$css};
+  // JavaScript
+  --on-javascript: #{color-variables.$on-javascript};
+  --javascript: #{color-variables.$javascript};
+  // TypeScript
+  --on-typescript: #{color-variables.$on-typescript};
+  --typescript: #{color-variables.$typescript};
+  // Keycloak
+  --on-keycloak: #{color-variables.$on-keycloak};
+  --keycloak: #{color-variables.$keycloak};
+  // MySQL
+  --on-mysql: #{color-variables.$on-mysql};
+  --mysql: #{color-variables.$mysql};
+  // MongoDB
+  --on-mongodb: #{color-variables.$on-mongodb};
+  --mongodb: #{color-variables.$mongodb};
+  // Gitlab
+  --on-gitlab: #{color-variables.$on-gitlab};
+  --gitlab: #{color-variables.$gitlab};
+  //Docker
+  --on-docker: #{color-variables.$on-docker};
+  --docker: #{color-variables.$docker};
+  // Kubernetes
+  --on-kubernetes: #{color-variables.$on-kubernetes};
+  --kubernetes: #{color-variables.$kubernetes};
+}

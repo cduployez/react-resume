@@ -1,0 +1,78 @@
+/* Black and white */
+$white: #ffffff;
+$black: #000000;
+
+/* Blue */
+$blue: rgb(33, 150, 243);
+$light-blue: #deebf7;
+$pale-blue: rgb(138, 180, 248);
+
+/* Gray */
+$light-gray: rgb(222, 235, 247);
+$dark-gray: rgb(53, 53, 53);
+$on-dark-gray: rgb(195, 195, 195);
+
+/* Blue gray */
+$blue-gray-500: #607d8b;
+$blue-gray-300: #90a4ae;
+$blue-gray-50: #e1f5fe;
+
+/* Yellow */
+$yellow: rgb(231, 171, 60);
+
+/* Applications */
+$linkedIn: rgb(0, 119, 191);
+$pdf: #ff3500;
+
+/* Skill views */
+// Java
+$on-java: lightgray;
+$java: #bf0c24;
+// C++
+$on-cplusplus: white;
+$cplusplus: rgb(43, 127, 189);
+// C#
+$on-csharp: white;
+$csharp: rgb(43, 127, 189);
+// Spring Framework
+$on-spring: white;
+$spring: rgb(109, 179, 63);
+// Angular
+$on-angular: rgb(221, 3, 48);
+$angular: #f2f2f2;
+// Python
+$on-python: rgb(255, 210, 66);
+$python: rgb(54, 111, 157);
+// Android
+$on-android: rgb(48, 221, 129);
+$android: #f2f2f2;
+// HTML
+$on-html: white;
+$html: rgb(232, 96, 59);
+// CSS
+$on-css: white;
+$css: rgb(43, 127, 189);
+// JavaScript
+$on-javascript: white;
+$javascript: #{$yellow};
+// TypeScript
+$on-typescript: #{$on-javascript};
+$typescript: #{$javascript};
+// Keycloak
+$on-keycloak: rgb(51, 198, 233);
+$keycloak: #f2f2f2;
+// MySQL
+$on-mysql: rgb(0, 117, 143);
+$mysql: #f2f2f2;
+// MongoDB
+$on-mongodb: rgb(16, 170, 80);
+$mongodb: #f2f2f2;
+// Gitlab
+$on-gitlab: rgb(226, 67, 41);
+$gitlab: rgb(85, 67, 135);
+//Docker
+$on-docker: rgb(9, 156, 236);
+$docker: #f2f2f2;
+// Kubernetes
+$on-kubernetes: #f2f2f2;
+$kubernetes: rgb(47, 103, 218);
