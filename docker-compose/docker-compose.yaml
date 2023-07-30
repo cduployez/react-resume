@@ -9,4 +9,4 @@ services:
     ports:
       - 11002:80
     environment:
-      - BASE_HREF=
+      - PUBLIC_URL=
