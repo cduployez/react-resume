@@ -1,0 +1,42 @@
+@use '../../assets/styles/variables/variables';
+
+main {
+  margin: 0;
+  padding: 0 10% 5rem;
+
+  .columns {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
+
+    div {
+      width: calc(50vw - 15%);
+    }
+  }
+
+  .Footer {
+    display: none;
+  }
+}
+
+@media (max-width: variables.$tablet-width) {
+  main {
+    padding: 0 5% 5rem;
+
+    .columns {
+      div {
+        width: 100%;
+      }
+    }
+
+    .Footer {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: variables.$phone-width) {
+  main {
+    padding: 0 2% 5rem;
+  }
+}

@@ -3,16 +3,14 @@ import axios, {AxiosInstance} from 'axios';
 
 export class HttpService {
 
-    readonly configService: ConfigService = new ConfigService();
-
-    constructor(private readonly serviceUrl: `/${string}`) {
+    constructor(private readonly configService: ConfigService, private readonly serviceUrl: `/${string}`) {
     }
 
     createClient(): AxiosInstance {
         let headers = {
             Accept: 'application/json'
         };
-        return axios.create({baseURL: this.configService.backResumeUrl || undefined, timeout: 31000, headers: headers});
+        return axios.create({baseURL: this.configService.backResumeUrl, timeout: 31000, headers: headers});
     }
 
     /**
