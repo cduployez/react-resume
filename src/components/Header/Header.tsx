@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './Header.scss';
 import Loader from '../Loader/Loader';
 import {ProfileHttpService} from '../../helpers/http/profile-http.service';
@@ -6,8 +6,9 @@ import {ProfileDto} from '../../model/dtos/profile-dto';
 import {UseStateType} from '../../types/use-state-type';
 import {ConfigService} from '../../helpers/config/config-service';
 
+const configService: ConfigService = new ConfigService(process.env);
+
 function Header() {
-    const configService: ConfigService = useMemo(() => new ConfigService(), []);
 
     let keyIndex: number = 0;
     const goalTitle: string = 'Projet professionnel';
