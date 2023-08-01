@@ -1,5 +1,5 @@
+import styles from './Header.module.scss';
 import React, {useEffect, useState} from 'react';
-import './Header.scss';
 import Loader from '../Loader/Loader';
 import {ProfileHttpService} from '../../helpers/http/profile-http.service';
 import {ProfileDto} from '../../model/dtos/profile-dto';
@@ -59,23 +59,23 @@ function Header(): React.JSX.Element {
     if (profile) {
         return (
             <>
-                <section className="Header container">
-                    <div className="side side-left">
-                        <img className={'light-theme'} src={configService.avatarUrl}/>
+                <section className={`${styles.Header} ${styles.container}`}>
+                    <div className={`${styles.side} ${styles.sideLeft}`}>
+                        <img className={'light-theme'} src={configService.avatarUrl} alt="avatar"/>
                     </div>
 
-                    <div className="main">
+                    <div className={`${styles.main}`}>
                         <h1>{profile.fullName}</h1>
-                        <div className="main-grid info">
-                            <div className="main-grid-col main-grid-col-left">
+                        <div className={`${styles.mainGrid} info`}>
+                            <div className={`${styles.mainGridCol} ${styles.mainGridColLeft}`}>
                                 <ul>{toLi(leftInfoList)}</ul>
                             </div>
-                            <div className="main-grid-col main-grid-col-right">
+                            <div className={`${styles.mainGridCol} ${styles.mainGridColRight}`}>
                                 <ul>{toLi(rightInfoList)}</ul>
                             </div>
                         </div>
-                        <div className="main-grid contact">
-                            <div className="main-grid-col flex-merge-row">
+                        <div className={`${styles.mainGrid} ${styles.contact}`}>
+                            <div className={`${styles.mainGridCol} ${styles.flexMergeRow}`}>
                                 <ul>
                                     <li>
                                         <a href={`mailto:${profile.email}`}>{profile.email}</a>
@@ -85,19 +85,18 @@ function Header(): React.JSX.Element {
                         </div>
                     </div>
 
-                    <div className="side side-right">
+                    <div className={`${styles.side} ${styles.sideRight}`}>
                         <h2>{goalTitle}</h2>
                         {toGoalElements(profile.goals)}
                     </div>
                 </section>
                 <Banner position={profile.position}/>
             </>
-        )
-            ;
+        );
     }
 
     return (
-        <section className="Header container"></section>
+        <section className={`${styles.Header} ${styles.container}`}></section>
     );
 }
 
