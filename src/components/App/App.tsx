@@ -1,15 +1,13 @@
 import React from 'react';
-import './App.scss';
+import styles from './App.module.scss';
 import Header from '../Header/Header';
+
 
 function App() {
     return (
-        <>
+        <main className={styles.App} data-testid="app-main">
             <Header/>
-            <main data-testid="app-main">
-            </main>
-        </>
-
+        </main>
     );
 }
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import './Banner.scss';
+import styles from './Banner.module.scss';
 
 function Banner({position}: { position: string }): React.JSX.Element {
     return (
-        <section className="Banner">
+        <section className={styles.Banner}>
             <h1>{position}</h1>
         </section>
     );
