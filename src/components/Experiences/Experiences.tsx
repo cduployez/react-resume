@@ -51,7 +51,7 @@ function Experiences(): React.JSX.Element {
             <>
                 <div>
                     <DatePrefix dateRange={experience.dateRange}/>
-                    <Title title={experience.project} detail={messages.jobTypeText(experience.jobType)}/>
+                    <Title title={experience.company} detail={messages.jobTypeText(experience.jobType)}/>
                 </div>
                 <div>
                     <Subtitle subtitle={experience.project}/>
