@@ -1,0 +1,14 @@
+@use '../../assets/styles/variables/variables';
+@use '../../assets/styles/variables/theme-variables';
+
+.title {
+  font-weight: bold;
+  color: theme-variables.$on-background;
+  transition: variables.$transition-delay;
+}
+
+.detail {
+  margin-left: 0.2rem;
+  color: theme-variables.$on-background;
+  transition: variables.$transition-delay;
+}

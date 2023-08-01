@@ -1,0 +1,13 @@
+@use '../../assets/styles/variables/variables';
+@use '../../assets/styles/variables/theme-variables';
+
+.dateRange {
+  color: theme-variables.$primary;
+  text-transform: capitalize;
+}
+
+.dateRange:after {
+  content: variables.$title-delimiter;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}

@@ -4,7 +4,7 @@ export class DateRangeDto {
     /**
      * Format utilisé par DatePipe
      */
-    readonly datePipeFormat: 'MMMM yyyy' | 'yyyy';
+    readonly datePipeFormat: 'MMMM YYYY' | 'YYYY';
 
     beginDate: Date;
 
@@ -30,16 +30,16 @@ export class DateRangeDto {
         this.datePipeFormat = this.initDatePipeFormat(format);
     }
 
-    initDatePipeFormat(format: DateRangeTypeEnum): 'MMMM yyyy' | 'yyyy' {
+    initDatePipeFormat(format: DateRangeTypeEnum): 'MMMM YYYY' | 'YYYY' {
         // If not defined --> default to year format
         if (!format) {
             return this.initDatePipeFormat(DateRangeTypeEnum.YEAR);
         }
         switch (format) {
             case DateRangeTypeEnum.MONTH:
-                return 'MMMM yyyy';
+                return 'MMMM YYYY';
             case DateRangeTypeEnum.YEAR:
-                return 'yyyy';
+                return 'YYYY';
         }
     }
 }
