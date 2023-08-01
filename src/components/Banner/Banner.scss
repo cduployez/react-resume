@@ -1,0 +1,17 @@
+@use '../../assets/styles/variables/variables';
+@use '../../assets/styles/variables/theme-variables';
+
+.Banner {
+  h1 {
+    background-color: theme-variables.$banner;
+    color: theme-variables.$on-banner;
+    transition: variables.$transition-delay;
+
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+
+    font-size: 1.5rem;
+  }
+}
+

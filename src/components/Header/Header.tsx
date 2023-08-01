@@ -5,10 +5,11 @@ import {ProfileHttpService} from '../../helpers/http/profile-http.service';
 import {ProfileDto} from '../../model/dtos/profile-dto';
 import {UseStateType} from '../../types/use-state-type';
 import {ConfigService} from '../../helpers/config/config-service';
+import Banner from '../Banner/Banner';
 
 const configService: ConfigService = new ConfigService(process.env);
 
-function Header() {
+function Header(): React.JSX.Element {
 
     let keyIndex: number = 0;
     const goalTitle: string = 'Projet professionnel';
@@ -57,43 +58,46 @@ function Header() {
 
     if (profile) {
         return (
-            <section className="container">
-                <div className="side side-left">
-                    <img className={'light-theme'} src={configService.avatarUrl}/>
-                </div>
+            <>
+                <section className="Header container">
+                    <div className="side side-left">
+                        <img className={'light-theme'} src={configService.avatarUrl}/>
+                    </div>
 
-                <div className="main">
-                    <h1>{profile.fullName}</h1>
-                    <div className="main-grid info">
-                        <div className="main-grid-col main-grid-col-left">
-                            <ul>{toLi(leftInfoList)}</ul>
+                    <div className="main">
+                        <h1>{profile.fullName}</h1>
+                        <div className="main-grid info">
+                            <div className="main-grid-col main-grid-col-left">
+                                <ul>{toLi(leftInfoList)}</ul>
+                            </div>
+                            <div className="main-grid-col main-grid-col-right">
+                                <ul>{toLi(rightInfoList)}</ul>
+                            </div>
                         </div>
-                        <div className="main-grid-col main-grid-col-right">
-                            <ul>{toLi(rightInfoList)}</ul>
+                        <div className="main-grid contact">
+                            <div className="main-grid-col flex-merge-row">
+                                <ul>
+                                    <li>
+                                        <a href={`mailto:${profile.email}`}>{profile.email}</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div className="main-grid contact">
-                        <div className="main-grid-col flex-merge-row">
-                            <ul>
-                                <li>
-                                    <a href={`mailto:${profile.email}`}>{profile.email}</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="side side-right">
-                    <h2>{goalTitle}</h2>
-                    {toGoalElements(profile.goals)}
-                </div>
-            </section>
+                    <div className="side side-right">
+                        <h2>{goalTitle}</h2>
+                        {toGoalElements(profile.goals)}
+                    </div>
+                </section>
+                <Banner position={profile.position}/>
+            </>
         )
             ;
     }
 
     return (
-        <section className="container"></section>
+        <section className="Header container"></section>
     );
 }
 
