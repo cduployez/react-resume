@@ -1,0 +1,7 @@
+@use '../../assets/styles/variables/theme-variables';
+
+.subtitle {
+  font-variant: all-small-caps;
+  font-weight: bold;
+  color: theme-variables.$primary;
+}

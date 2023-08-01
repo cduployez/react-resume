@@ -1,0 +1,9 @@
+@use '../../assets/styles/variables/theme-variables';
+@use '../../assets/styles/variables/variables';
+
+.description {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  color: theme-variables.$on-background;
+  transition: variables.$transition-delay;
+}

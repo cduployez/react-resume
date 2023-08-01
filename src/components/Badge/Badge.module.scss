@@ -1,0 +1,20 @@
+@use '../../assets/styles/variables/theme-variables';
+@use '../../assets/styles/variables/variables';
+
+
+.Badge {
+  display: inline-block;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border-radius: 5px;
+  border: 1px solid theme-variables.$on-badge;
+  color: theme-variables.$on-badge;
+  background-color: theme-variables.$badge;
+  transition: variables.$transition-delay;
+  cursor: default;
+
+  &:hover, &.active {
+    color: theme-variables.$badge;
+    background-color: theme-variables.$on-badge;
+  }
+}
