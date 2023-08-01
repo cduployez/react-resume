@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from './App.module.scss';
 import Header from '../Header/Header';
+import MenuBar from '../MenuBar/MenuBar';
 
-
-function App() {
+function App(): React.JSX.Element {
     return (
-        <main className={styles.App} data-testid="app-main">
-            <Header/>
-        </main>
+        <>
+            <MenuBar/>
+            <main className={styles.App} data-testid="app-main">
+                <Header/>
+            </main>
+        </>
     );
 }
 

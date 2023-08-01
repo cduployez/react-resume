@@ -1,0 +1,79 @@
+@use '../../assets/styles/variables/variables';
+@use '../../assets/styles/variables/theme-variables';
+
+nav.MenuBar {
+  background-color: theme-variables.$navbar;
+  color: theme-variables.$on-navbar;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-size: larger;
+  user-select: none;
+  transition: variables.$transition-delay;
+
+  -webkit-box-shadow: 0 1px 15px 0 theme-variables.$navbar-shadow;
+  -moz-box-shadow: 0 1px 15px 0 theme-variables.$navbar-shadow;
+  box-shadow: 0 1px 15px 0 theme-variables.$navbar-shadow;
+
+  .title {
+    user-select: none;
+  }
+
+  .link {
+    text-decoration: none;
+    padding: 1rem;
+    cursor: pointer;
+    transition: variables.$transition-delay;
+    color: theme-variables.$on-navbar;
+  }
+
+  a {
+    font-size: larger;
+  }
+
+  .minimize {
+    font-size: small;
+  }
+
+  a.linkedin:hover {
+    color: theme-variables.$linkedin;
+  }
+
+  a.github:hover {
+    color: theme-variables.$github;
+  }
+
+  a.pdf:hover {
+    color: theme-variables.$pdf;
+  }
+
+  .theme-button:hover {
+    color: theme-variables.$theme-button;
+  }
+
+  .minimize:hover {
+    color: theme-variables.$primary;
+  }
+}
+
+nav.MenuBar.minimized {
+  position: absolute;
+  right: 0;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+  }
+
+  .link {
+    padding: 0.5rem 0;
+  }
+}
+
+.MenuBar.placeholder {
+  padding-bottom: 2rem;
+}
