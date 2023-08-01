@@ -8,6 +8,9 @@ import ItemContainer from '../ItemContainer/ItemContainer';
 import DatePrefix from '../DatePrefix/DatePrefix';
 import Title from '../Title/Title';
 import {JobTypeEnum} from '../../model/enums/job-type.enum';
+import Subtitle from '../Subtitle/Subtitle';
+import Descriptions from '../Descriptions/Descriptions';
+import Badges from '../Badges/Badges';
 
 const configService: ConfigService = new ConfigService(process.env);
 
@@ -45,10 +48,18 @@ function Experiences(): React.JSX.Element {
 
     function experienceElement(experience: ExperienceDto): React.JSX.Element {
         return (
-            <div>
-                <DatePrefix dateRange={experience.dateRange}/>
-                <Title title={experience.project} detail={messages.jobTypeText(experience.jobType)}/>
-            </div>
+            <>
+                <div>
+                    <DatePrefix dateRange={experience.dateRange}/>
+                    <Title title={experience.project} detail={messages.jobTypeText(experience.jobType)}/>
+                </div>
+                <div>
+                    <Subtitle subtitle={experience.project}/>
+                    <Descriptions descriptions={experience.descriptions}/>
+                    <Badges badges={experience.skills}/>
+                </div>
+            </>
+
         );
     }
 
