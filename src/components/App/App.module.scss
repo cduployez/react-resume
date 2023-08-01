@@ -1,6 +1,6 @@
 @use '../../assets/styles/variables/variables';
 
-main.App {
+.App {
   margin: 0;
   padding: 0 10% 5rem;
 
@@ -9,7 +9,7 @@ main.App {
     flex-flow: row-reverse wrap;
     justify-content: space-between;
 
-    div {
+    .column {
       width: calc(50vw - 15%);
     }
   }

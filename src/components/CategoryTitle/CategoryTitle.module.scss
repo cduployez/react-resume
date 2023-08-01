@@ -1,0 +1,28 @@
+@use '../../assets/styles/variables/variables';
+@use '../../assets/styles/variables/theme-variables';
+
+.title {
+  cursor: pointer;
+  background-color: theme-variables.$primary;
+  transition: variables.$transition-delay;
+  color: theme-variables.$on-primary;
+  border-radius: 5px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  h3 {
+    padding: 0.2em;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0;
+    font-variant: small-caps;
+  }
+
+  .expandButton {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: smaller;
+    position: absolute;
+    margin: auto;
+  }
+}
