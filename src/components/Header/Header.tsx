@@ -68,7 +68,7 @@ function Header(): React.JSX.Element {
 
                 <div className={`${styles.main}`}>
                     <h1>{profile.fullName}</h1>
-                    <div className={`${styles.mainGrid} info`}>
+                    <div className={`${styles.mainGrid} ${styles.info}`}>
                         <div className={`${styles.mainGridCol} ${styles.mainGridColLeft}`}>
                             <ul>{toLiElements(leftInfoList)}</ul>
                         </div>
