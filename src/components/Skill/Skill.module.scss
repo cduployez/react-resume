@@ -1,0 +1,39 @@
+@use '../../assets/styles/variables/variables';
+@use '../../assets/styles/variables/theme-variables';
+
+.iconWithTitle {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Circle */
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    /* Colors */
+    background-color: theme-variables.$icon;
+    color: theme-variables.$on-icon;
+    /* Alignment */
+    text-align: center;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    transition: variables.$transition-delay;
+  }
+
+  .icon:hover,
+  .icon.active {
+    color: theme-variables.$on-icon-hover;
+    background-color: theme-variables.$icon-hover;
+  }
+
+  .title {
+    color: theme-variables.$on-background;
+  }
+}
