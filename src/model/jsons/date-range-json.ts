@@ -1,4 +1,4 @@
-import {DateRangeTypeEnum} from '../enums/date-range-type.enum';
+import { DateRangeTypeEnum } from '../enums/date-range-type.enum';
 
 /**
  * Object corresponding to deserialized JSON coming from the backend

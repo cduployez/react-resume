@@ -9,25 +9,25 @@ import Hobbies from '../Hobbies/Hobbies';
 import Projects from '../Projects/Projects';
 
 function App(): React.JSX.Element {
-    return (
-        <>
-            <MenuBar/>
-            <main className={styles.App} data-testid="app-main">
-                <Header/>
-                <div className={styles.columns}>
-                    <div className={styles.column}>
-                        <Experiences/>
-                        <Projects/>
-                    </div>
-                    <div className={styles.column}>
-                        <Formations/>
-                        <Languages/>
-                        <Hobbies/>
-                    </div>
-                </div>
-            </main>
-        </>
-    );
+  return (
+    <>
+      <MenuBar />
+      <main className={styles.App} data-testid="app-main">
+        <Header />
+        <div className={styles.columns}>
+          <div className={styles.column}>
+            <Experiences />
+            <Projects />
+          </div>
+          <div className={styles.column}>
+            <Formations />
+            <Languages />
+            <Hobbies />
+          </div>
+        </div>
+      </main>
+    </>
+  );
 }
 
 export default App;

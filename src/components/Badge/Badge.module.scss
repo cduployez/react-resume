@@ -1,7 +1,6 @@
 @use '../../assets/styles/variables/theme-variables';
 @use '../../assets/styles/variables/variables';
 
-
 .Badge {
   display: inline-block;
   margin: 0.2rem;
@@ -13,7 +12,8 @@
   transition: variables.$transition-delay;
   cursor: default;
 
-  &:hover, &.active {
+  &:hover,
+  &.active {
     color: theme-variables.$badge;
     background-color: theme-variables.$on-badge;
   }
