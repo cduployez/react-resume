@@ -1,4 +1,4 @@
 export enum DateRangeTypeEnum {
-    YEAR = 'YEAR',
-    MONTH = 'MONTH'
+  YEAR = 'YEAR',
+  MONTH = 'MONTH'
 }
