@@ -5,7 +5,6 @@ import activeSkillReducer from './reducers/activeSkillReducer';
 
 const rootReducer = combineReducers({
   activeSkill: activeSkillReducer
-  // ... other reducers if you have any
 });
 
 export default configureStore({

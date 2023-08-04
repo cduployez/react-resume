@@ -25,10 +25,9 @@ export function addActiveSkill(activeSkill: ActiveSkill): AddActiveSkillProps {
     activeSkill: activeSkill
   };
 }
-export function removeActiveSkill(activeSkill: {
-  parent: SkillEnum;
-  children: SkillEnum[];
-}): RemoveActiveSkillProps {
+export function removeActiveSkill(
+  activeSkill: ActiveSkill
+): RemoveActiveSkillProps {
   return {
     type: ActionEnum.REMOVE_ACTIVE_SKILL,
     activeSkill: activeSkill
