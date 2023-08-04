@@ -17,10 +17,10 @@ const themeService: ThemeService = new ThemeService(
 );
 
 function MenuBar(): React.JSX.Element {
-  let [minimized, setMinimized]: UseStateType<boolean> = useState(
+  const [minimized, setMinimized]: UseStateType<boolean> = useState(
     sessionStorage.menuBarMinized || false
   );
-  let [themeIcon, setThemeIcon]: UseStateType<IconDefinition> = useState(
+  const [themeIcon, setThemeIcon]: UseStateType<IconDefinition> = useState(
     iconsService.faMoonSolid
   );
 

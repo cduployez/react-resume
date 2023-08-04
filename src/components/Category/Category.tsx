@@ -12,7 +12,7 @@ type CategoryProps = {
 };
 
 function Category(props: CategoryProps): React.JSX.Element {
-  let [categoryDisplayed, setCategoryDisplayed]: UseStateType<boolean> =
+  const [categoryDisplayed, setCategoryDisplayed]: UseStateType<boolean> =
     useState(true);
 
   /**

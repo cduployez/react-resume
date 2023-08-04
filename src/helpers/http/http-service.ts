@@ -8,7 +8,7 @@ export class HttpService {
   ) {}
 
   createClient(): AxiosInstance {
-    let headers = {
+    const headers = {
       Accept: 'application/json'
     };
     return axios.create({
