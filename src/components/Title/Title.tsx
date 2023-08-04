@@ -1,18 +1,17 @@
 import styles from './Title.module.scss';
 
 type TitleProps = {
-    title: string;
-    detail?: string | null | undefined;
-}
+  title: string;
+  detail?: string | null | undefined;
+};
 
 function Title(props: TitleProps): React.JSX.Element {
-
-    return (
-        <>
-            <span className={styles.title}>{props.title}</span>
-            {props.detail && <span className={styles.detail}>{props.detail}</span>}
-        </>
-    );
+  return (
+    <>
+      <span className={styles.title}>{props.title}</span>
+      {props.detail && <span className={styles.detail}>{props.detail}</span>}
+    </>
+  );
 }
 
 export default Title;
