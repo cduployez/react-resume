@@ -32,7 +32,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:production": "env-cmd -f .env npm run-script build",
-    "build:local": "env-cmd -f local.env npm run-script build"
+    "build:local": "env-cmd -f local.env npm run-script build",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc.json"
   },
   "eslintConfig": {
     "extends": [
