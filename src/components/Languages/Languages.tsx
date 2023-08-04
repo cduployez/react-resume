@@ -50,10 +50,16 @@ function Languages(): React.JSX.Element {
   }
 
   function languagesElements(): React.JSX.Element {
+    let languageKey: number = 0;
     return (
       <>
         {languages.map((language: LanguageDto) => {
-          return <ItemContainer contentElement={languageElement(language)} />;
+          return (
+            <ItemContainer
+              contentElement={languageElement(language)}
+              key={`language-${languageKey++}`}
+            />
+          );
         })}
       </>
     );

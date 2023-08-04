@@ -57,10 +57,16 @@ function Projects(): React.JSX.Element {
   }
 
   function projectsElements(): React.JSX.Element {
+    let projectKey: number = 0;
     return (
       <>
         {projects.map((project: ProjectDto) => {
-          return <ItemContainer contentElement={projectElement(project)} />;
+          return (
+            <ItemContainer
+              contentElement={projectElement(project)}
+              key={`project-${projectKey++}`}
+            />
+          );
         })}
       </>
     );

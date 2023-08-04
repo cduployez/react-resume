@@ -7,10 +7,11 @@ type BadgesProps = {
 };
 
 function Badges(props: BadgesProps): React.JSX.Element {
+  let badgeKey: number = 0;
   return (
     <div className={styles.Badges}>
       {props.badges.map((badge: SkillBadgeDto) => (
-        <Badge badge={badge} />
+        <Badge badge={badge} key={`badge-${badgeKey++}`} />
       ))}
     </div>
   );
