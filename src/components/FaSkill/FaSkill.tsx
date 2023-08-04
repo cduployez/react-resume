@@ -2,7 +2,6 @@ import styles from './FaSkill.module.scss';
 import Skill from '../Skill/Skill';
 import { FaSkillItem } from '../../model/views/fa-skill-item';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { SkillEnum } from '../../model/enums/skill.enum';
 import { SkillMessages } from '../Skill/skill-messages';
 
 const messages: SkillMessages = new SkillMessages();
@@ -12,18 +11,14 @@ interface FaSkillProps {
 }
 
 function FaSkill(props: FaSkillProps) {
-  function optionalClass(skillEnum: SkillEnum): string {
-    return skillEnum ? messages.skillCssClass(skillEnum) : '';
-  }
-
   function faIconElement(): React.JSX.Element {
     return (
-      <FontAwesomeIcon
-        icon={props.item.faIcon}
+      <span
         className={`${styles.faIcon} ${
-          styles[optionalClass(props.item.skillEnum)]
-        }`}
-      />
+          styles[messages.optionalClass(props.item.skillEnum)]
+        }`}>
+        <FontAwesomeIcon icon={props.item.faIcon} />
+      </span>
     );
   }
 
@@ -33,6 +28,7 @@ function FaSkill(props: FaSkillProps) {
       contentElement={faIconElement()}
       skillEnum={props.item.skillEnum}
       childrenKeywords={props.item.childrenKeywords}
+      iconClassName={messages.optionalClass(props.item.skillEnum)}
     />
   );
 }

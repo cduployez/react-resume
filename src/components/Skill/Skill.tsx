@@ -1,6 +1,7 @@
 import styles from './Skill.module.scss';
 import classNames from 'classnames';
 import { SkillEnum } from '../../model/enums/skill.enum';
+import iconStyles from './SkillIconColors.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   ActiveSkill,
@@ -13,6 +14,7 @@ interface SkillProps {
   childrenKeywords: SkillEnum[];
   skillEnum?: SkillEnum | null | undefined;
   contentElement: React.JSX.Element;
+  iconClassName: string;
 }
 
 function Skill(props: SkillProps): React.JSX.Element {
@@ -45,10 +47,11 @@ function Skill(props: SkillProps): React.JSX.Element {
         )
       }>
       <div
-        className={classNames({
+        className={`${classNames({
           [styles.active]: checkActive(),
-          [styles.icon]: true
-        })}>
+          [styles.icon]: true,
+          [iconStyles.icon]: true
+        })} ${iconStyles[props.iconClassName]}`}>
         {props.contentElement}
       </div>
       <span className={styles.title}>{props.title}</span>

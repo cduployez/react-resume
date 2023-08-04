@@ -1,0 +1,114 @@
+@use '../../assets/styles/variables/variables';
+@use '../../assets/styles/variables/theme-variables';
+
+/**
+  Mixin to add colors to font-awesome badges
+ */
+@mixin badgeColor($badgeClassName, $hoverTextColor, $hoverBackgroundColor) {
+  .icon.#{$badgeClassName}:hover,
+  .icon.#{$badgeClassName}.active {
+    --on-icon-hover: #{$hoverTextColor};
+    --icon-hover: #{$hoverBackgroundColor};
+  }
+}
+
+/**
+  Mixin to add colors to shaped badges (javascript, typescript)
+ */
+@mixin badgeShapeColor(
+  $badgeClassName,
+  $hoverTextColor,
+  $hoverBackgroundColor
+) {
+  .icon.#{$badgeClassName} span {
+    --icon-text: theme-variables.$on-icon-hover;
+  }
+
+  .icon.#{$badgeClassName}:hover,
+  .icon.#{$badgeClassName}.active {
+    --on-icon-hover: #{$hoverTextColor};
+    --icon-hover: #{$hoverBackgroundColor};
+
+    span {
+      --on-icon-inner: #{$hoverBackgroundColor};
+    }
+  }
+}
+
+.icon:hover,
+.icon.active {
+  --on-icon-hover: theme-variables.$icon;
+  --icon-hover: theme-variables.$on-icon;
+  background-color: theme-variables.$icon-hover;
+  color: theme-variables.$on-icon-hover;
+}
+
+@include badgeColor(java, theme-variables.$on-java, theme-variables.$java);
+@include badgeColor(
+                cplusplus,
+                theme-variables.$on-cplusplus,
+                theme-variables.$cplusplus
+);
+@include badgeColor(
+                csharp,
+                theme-variables.$on-csharp,
+                theme-variables.$csharp
+);
+@include badgeColor(
+                spring,
+                theme-variables.$on-spring,
+                theme-variables.$spring
+);
+@include badgeColor(
+                angular,
+                theme-variables.$on-angular,
+                theme-variables.$angular
+);
+@include badgeColor(
+                python,
+                theme-variables.$on-python,
+                theme-variables.$python
+);
+@include badgeColor(
+                android,
+                theme-variables.$on-android,
+                theme-variables.$android
+);
+@include badgeColor(html, theme-variables.$on-html, theme-variables.$html);
+@include badgeColor(css, theme-variables.$on-css, theme-variables.$css);
+@include badgeShapeColor(
+                javascript,
+                theme-variables.$on-javascript,
+                theme-variables.$javascript
+);
+@include badgeShapeColor(
+                typescript,
+                theme-variables.$on-typescript,
+                theme-variables.$typescript
+);
+@include badgeColor(
+                keycloak,
+                theme-variables.$on-keycloak,
+                theme-variables.$keycloak
+);
+@include badgeColor(mysql, theme-variables.$on-mysql, theme-variables.$mysql);
+@include badgeColor(
+                mongodb,
+                theme-variables.$on-mongodb,
+                theme-variables.$mongodb
+);
+@include badgeColor(
+                docker,
+                theme-variables.$on-docker,
+                theme-variables.$docker
+);
+@include badgeColor(
+                kubernetes,
+                theme-variables.$on-kubernetes,
+                theme-variables.$kubernetes
+);
+@include badgeColor(
+                gitlab,
+                theme-variables.$on-gitlab,
+                theme-variables.$gitlab
+);

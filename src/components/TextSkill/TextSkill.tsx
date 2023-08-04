@@ -1,6 +1,9 @@
 import styles from './TextSkill.module.scss';
 import Skill from '../Skill/Skill';
 import { TextSkillItem } from '../../model/views/text-skill-item';
+import { SkillMessages } from '../Skill/skill-messages';
+
+const messages: SkillMessages = new SkillMessages();
 
 interface TextSkillProps {
   item: TextSkillItem;
@@ -17,6 +20,7 @@ function TextSkill(props: TextSkillProps) {
       skillEnum={props.item.skillEnum}
       contentElement={textSkillElement()}
       childrenKeywords={props.item.childrenKeywords}
+      iconClassName={messages.optionalClass(props.item.skillEnum)}
     />
   );
 }
