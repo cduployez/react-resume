@@ -31,4 +31,8 @@ export class SkillMessages {
   skillCssClass(skill: SkillEnum | null): string {
     return skill ? this.skillCssClassRecord[skill] : '';
   }
+
+  optionalClass(skillEnum: SkillEnum): string {
+    return skillEnum ? this.skillCssClass(skillEnum) : '';
+  }
 }
