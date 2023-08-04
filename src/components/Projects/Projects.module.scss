@@ -1,0 +1,17 @@
+@use '../../assets/styles/variables/variables';
+@use '../../assets/styles/variables/theme-variables';
+
+.title {
+  font-weight: bold;
+  color: theme-variables.$on-background;
+}
+
+.teamSize {
+  color: theme-variables.$primary;
+}
+
+.teamSize:before {
+  content: variables.$title-delimiter;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}

@@ -6,6 +6,7 @@ import Experiences from '../Experiences/Experiences';
 import Formations from '../Formations/Formations';
 import Languages from '../Languages/Languages';
 import Hobbies from '../Hobbies/Hobbies';
+import Projects from '../Projects/Projects';
 
 function App(): React.JSX.Element {
     return (
@@ -16,6 +17,7 @@ function App(): React.JSX.Element {
                 <div className={styles.columns}>
                     <div className={styles.column}>
                         <Experiences/>
+                        <Projects/>
                     </div>
                     <div className={styles.column}>
                         <Formations/>
