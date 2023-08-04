@@ -3,6 +3,8 @@ import styles from './App.module.scss';
 import Header from '../Header/Header';
 import MenuBar from '../MenuBar/MenuBar';
 import Experiences from '../Experiences/Experiences';
+import Formations from '../Formations/Formations';
+import Languages from '../Languages/Languages';
 
 function App(): React.JSX.Element {
     return (
@@ -15,6 +17,8 @@ function App(): React.JSX.Element {
                         <Experiences/>
                     </div>
                     <div className={styles.column}>
+                        <Formations/>
+                        <Languages/>
                     </div>
                 </div>
             </main>
