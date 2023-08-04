@@ -2,7 +2,11 @@ import styles from './Skill.module.scss';
 import classNames from 'classnames';
 import { SkillEnum } from '../../model/enums/skill.enum';
 import { useDispatch, useSelector } from 'react-redux';
-import { ActiveSkill, addActiveSkill } from '../../redux/actions/action';
+import {
+  ActiveSkill,
+  addActiveSkill,
+  removeActiveSkill
+} from '../../redux/actions/action';
 
 interface SkillProps {
   title: string;
@@ -24,9 +28,17 @@ function Skill(props: SkillProps): React.JSX.Element {
   return (
     <div
       className={styles.iconWithTitle}
-      onClick={() =>
+      onMouseEnter={() =>
         dispatch(
           addActiveSkill({
+            parent: props.skillEnum || null,
+            children: props.childrenKeywords
+          })
+        )
+      }
+      onMouseLeave={() =>
+        dispatch(
+          removeActiveSkill({
             parent: props.skillEnum || null,
             children: props.childrenKeywords
           })
