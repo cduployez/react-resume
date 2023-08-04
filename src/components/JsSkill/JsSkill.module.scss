@@ -1,0 +1,21 @@
+@use '../../assets/styles/variables/variables';
+@use '../../assets/styles/variables/theme-variables';
+
+.icon {
+  background-color: theme-variables.$on-icon;
+  transition: variables.$transition-delay;
+  font-weight: bold;
+  font-size: smaller;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 50%;
+  width: 50%;
+  padding-right: 0.1rem;
+  padding-left: 0.1rem;
+  user-select: none;
+
+  span {
+    color: theme-variables.$on-icon-inner;
+  }
+}
