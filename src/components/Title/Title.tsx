@@ -2,7 +2,7 @@ import styles from './Title.module.scss';
 
 type TitleProps = {
     title: string;
-    detail: string | null;
+    detail?: string | null | undefined;
 }
 
 function Title(props: TitleProps): React.JSX.Element {
