@@ -5,6 +5,7 @@ import MenuBar from '../MenuBar/MenuBar';
 import Experiences from '../Experiences/Experiences';
 import Formations from '../Formations/Formations';
 import Languages from '../Languages/Languages';
+import Hobbies from '../Hobbies/Hobbies';
 
 function App(): React.JSX.Element {
     return (
@@ -19,6 +20,7 @@ function App(): React.JSX.Element {
                     <div className={styles.column}>
                         <Formations/>
                         <Languages/>
+                        <Hobbies/>
                     </div>
                 </div>
             </main>

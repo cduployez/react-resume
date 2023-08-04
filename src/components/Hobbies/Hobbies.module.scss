@@ -1,0 +1,21 @@
+@use '../../assets/styles/variables/variables';
+@use '../../assets/styles/variables/theme-variables';
+
+.title {
+  color: theme-variables.$primary;
+}
+
+.title:before {
+  content: variables.$title-delimiter;
+  margin-right: 0.2rem;
+}
+
+.title:after {
+  content: ':';
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.values {
+  color: theme-variables.$on-background;
+}
