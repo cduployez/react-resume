@@ -19,6 +19,7 @@ function JsSkill(props: JsSkillProps) {
     <Skill
       title={props.item.title}
       contentElement={textIconElement()}
+      skillEnum={props.item.skillEnum}
       childrenKeywords={props.item.childrenKeywords}
     />
   );

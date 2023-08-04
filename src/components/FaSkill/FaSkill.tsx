@@ -31,6 +31,7 @@ function FaSkill(props: FaSkillProps) {
     <Skill
       title={props.item.title}
       contentElement={faIconElement()}
+      skillEnum={props.item.skillEnum}
       childrenKeywords={props.item.childrenKeywords}
     />
   );
