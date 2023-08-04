@@ -69,11 +69,15 @@ function Experiences(): React.JSX.Element {
   }
 
   function experiencesElements(): React.JSX.Element {
+    let experienceKey: number = 0;
     return (
       <>
         {experiences.map((experience: ExperienceDto) => {
           return (
-            <ItemContainer contentElement={experienceElement(experience)} />
+            <ItemContainer
+              contentElement={experienceElement(experience)}
+              key={`experience-${experienceKey++}`}
+            />
           );
         })}
       </>

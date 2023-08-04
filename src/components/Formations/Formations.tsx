@@ -49,10 +49,16 @@ function Formations(): React.JSX.Element {
   }
 
   function formationsElements(): React.JSX.Element {
+    let formationKey: number = 0;
     return (
       <>
         {formations.map((formation: FormationDto) => {
-          return <ItemContainer contentElement={formationElement(formation)} />;
+          return (
+            <ItemContainer
+              contentElement={formationElement(formation)}
+              key={`formation-${formationKey++}`}
+            />
+          );
         })}
       </>
     );

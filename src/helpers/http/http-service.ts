@@ -31,7 +31,7 @@ export class HttpService {
   httpGet<J, D>(
     url: string,
     mapFunction: (json: J) => D,
-    params?: { [key: string]: any }
+    params?: { [key: string]: object }
   ): Promise<D> {
     return this.createClient()
       .get<J>(this.url(url), { params })

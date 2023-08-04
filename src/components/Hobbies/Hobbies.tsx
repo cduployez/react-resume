@@ -48,10 +48,16 @@ function Hobbies(): React.JSX.Element {
   }
 
   function hobbiesElements(): React.JSX.Element {
+    let hobbyKey: number = 0;
     return (
       <>
         {hobbies.map((hobby: HobbyDto) => {
-          return <ItemContainer contentElement={hobbyElement(hobby)} />;
+          return (
+            <ItemContainer
+              contentElement={hobbyElement(hobby)}
+              key={`hobby-${hobbyKey++}`}
+            />
+          );
         })}
       </>
     );
