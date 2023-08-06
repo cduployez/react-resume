@@ -6,7 +6,7 @@ import {
 } from '../actions/action';
 
 const EMPTY_ACTIVE_SKILL: ActiveSkill = {
-  parent: null,
+  parents: [],
   children: []
 };
 

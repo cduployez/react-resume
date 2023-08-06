@@ -3,7 +3,7 @@ import { ActionEnum } from './action-enum';
 import { AnyAction } from 'redux';
 
 export interface ActiveSkill {
-  parent: SkillEnum | null;
+  parents: SkillEnum[];
   children: SkillEnum[];
 }
 
