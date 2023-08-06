@@ -18,13 +18,20 @@ interface SkillProps {
 }
 
 function Skill(props: SkillProps): React.JSX.Element {
-  const activeSkills = useSelector(
+  const activeSkills: ActiveSkill = useSelector(
     (state: { activeSkill: ActiveSkill }) => state.activeSkill
   );
+
   const dispatch = useDispatch();
 
   function checkActive(): boolean {
     return activeSkills?.parent === props.skillEnum;
+  }
+
+  function checkChildrenActive(): boolean {
+    return activeSkills?.children.some(
+      (skill: SkillEnum) => skill === props.skillEnum
+    );
   }
 
   return (
@@ -48,7 +55,7 @@ function Skill(props: SkillProps): React.JSX.Element {
       }>
       <div
         className={`${classNames({
-          [styles.active]: checkActive(),
+          [styles.active]: checkActive() || checkChildrenActive(),
           [styles.icon]: true,
           [iconStyles.icon]: true
         })} ${iconStyles[props.iconClassName]}`}>
