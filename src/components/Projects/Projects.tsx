@@ -33,10 +33,17 @@ function Projects(): React.JSX.Element {
     );
 
     setLoading(true);
-    projectsHttpService.findAll().then((projects: ProjectDto[]) => {
-      setProjects(projects);
-      setLoading(false);
-    });
+    projectsHttpService
+      .findAll()
+      .then((projects: ProjectDto[]) => {
+        setProjects(projects);
+      })
+      .catch(() => {
+        setProjects([]);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   function projectElement(project: ProjectDto): React.JSX.Element {

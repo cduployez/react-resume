@@ -43,10 +43,17 @@ function Experiences(): React.JSX.Element {
       new ExperiencesHttpService(configService);
 
     setLoading(true);
-    experiencesHttpService.findAll().then((experiences: ExperienceDto[]) => {
-      setExperiences(experiences);
-      setLoading(false);
-    });
+    experiencesHttpService
+      .findAll()
+      .then((experiences: ExperienceDto[]) => {
+        setExperiences(experiences);
+      })
+      .catch(() => {
+        setExperiences([]);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   function experienceElement(experience: ExperienceDto): React.JSX.Element {

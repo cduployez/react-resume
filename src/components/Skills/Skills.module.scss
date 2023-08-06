@@ -1,6 +1,6 @@
 @use '../../assets/styles/variables/theme-variables';
 
-p {
+.skillTitle {
   text-align: center;
   font-variant: small-caps;
   color: theme-variables.$on-background;

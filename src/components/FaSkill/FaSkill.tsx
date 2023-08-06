@@ -13,12 +13,12 @@ interface FaSkillProps {
 function FaSkill(props: FaSkillProps) {
   function faIconElement(): React.JSX.Element {
     return (
-      <span
+      <div
         className={`${styles.faIcon} ${
           styles[messages.optionalClass(props.item.skillEnum)]
         }`}>
         <FontAwesomeIcon icon={props.item.faIcon} />
-      </span>
+      </div>
     );
   }
 

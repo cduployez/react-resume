@@ -29,10 +29,17 @@ function Hobbies(): React.JSX.Element {
     );
 
     setLoading(true);
-    hobbiesHttpService.findAll().then((hobbies: HobbyDto[]) => {
-      setHobbies(hobbies);
-      setLoading(false);
-    });
+    hobbiesHttpService
+      .findAll()
+      .then((hobbies: HobbyDto[]) => {
+        setHobbies(hobbies);
+      })
+      .catch(() => {
+        setHobbies([]);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   function hobbyElement(hobby: HobbyDto): React.JSX.Element {
