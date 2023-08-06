@@ -8,14 +8,16 @@ import {
   addActiveSkill,
   removeActiveSkill
 } from '../../redux/actions/action';
+import { SkillMessages } from './skill-messages';
 
 interface SkillProps {
   title: string;
   childrenKeywords: SkillEnum[];
   skillEnum?: SkillEnum | null | undefined;
   contentElement: React.JSX.Element;
-  iconClassName: string;
 }
+
+const messages: SkillMessages = new SkillMessages();
 
 function Skill(props: SkillProps): React.JSX.Element {
   const activeSkills: ActiveSkill = useSelector(
@@ -33,6 +35,9 @@ function Skill(props: SkillProps): React.JSX.Element {
       (skill: SkillEnum) => skill === props.skillEnum
     );
   }
+
+  if (props.skillEnum === SkillEnum.JAVA)
+    console.log(iconStyles[messages.skillCssClass(props.skillEnum || null)]);
 
   return (
     <div
@@ -54,11 +59,13 @@ function Skill(props: SkillProps): React.JSX.Element {
         )
       }>
       <div
-        className={`${classNames({
+        className={classNames({
           [styles.active]: checkActive() || checkChildrenActive(),
+          [iconStyles.active]: checkActive() || checkChildrenActive(),
           [styles.icon]: true,
-          [iconStyles.icon]: true
-        })} ${iconStyles[props.iconClassName]}`}>
+          [iconStyles.icon]: true,
+          [iconStyles[messages.skillCssClass(props.skillEnum || null)]]: true
+        })}>
         {props.contentElement}
       </div>
       <span className={styles.title}>{props.title}</span>
