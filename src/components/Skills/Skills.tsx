@@ -26,7 +26,7 @@ type SkillsMessages = {
 };
 
 const messages: SkillsMessages = {
-  categoryTitle: 'Langues'
+  categoryTitle: 'Compétences'
 };
 
 function Skills(): React.JSX.Element {
