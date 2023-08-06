@@ -20,6 +20,8 @@ interface SkillProps {
 const messages: SkillMessages = new SkillMessages();
 
 function Skill(props: SkillProps): React.JSX.Element {
+  const skillEnums: SkillEnum[] = props.skillEnum ? [props.skillEnum] : [];
+
   const activeSkills: ActiveSkill = useSelector(
     (state: { activeSkill: ActiveSkill }) => state.activeSkill
   );
@@ -27,17 +29,16 @@ function Skill(props: SkillProps): React.JSX.Element {
   const dispatch = useDispatch();
 
   function checkActive(): boolean {
-    return activeSkills?.parent === props.skillEnum;
+    return activeSkills?.parents.some(
+      activeSkill => activeSkill === props.skillEnum
+    );
   }
 
   function checkChildrenActive(): boolean {
     return activeSkills?.children.some(
-      (skill: SkillEnum) => skill === props.skillEnum
+      (activeChildSkill: SkillEnum) => activeChildSkill === props.skillEnum
     );
   }
-
-  if (props.skillEnum === SkillEnum.JAVA)
-    console.log(iconStyles[messages.skillCssClass(props.skillEnum || null)]);
 
   return (
     <div
@@ -45,7 +46,7 @@ function Skill(props: SkillProps): React.JSX.Element {
       onMouseEnter={() =>
         dispatch(
           addActiveSkill({
-            parent: props.skillEnum || null,
+            parents: skillEnums,
             children: props.childrenKeywords
           })
         )
@@ -53,7 +54,7 @@ function Skill(props: SkillProps): React.JSX.Element {
       onMouseLeave={() =>
         dispatch(
           removeActiveSkill({
-            parent: props.skillEnum || null,
+            parents: skillEnums,
             children: props.childrenKeywords
           })
         )
