@@ -1,12 +1,13 @@
 import { SkillEnum } from '../../model/enums/skill.enum';
 import { ActionEnum } from './action-enum';
+import { AnyAction } from 'redux';
 
 export interface ActiveSkill {
   parent: SkillEnum | null;
   children: SkillEnum[];
 }
 
-interface ActiveSkillProps {
+interface ActiveSkillProps extends AnyAction {
   type: ActionEnum;
   activeSkill: ActiveSkill;
 }
@@ -25,6 +26,7 @@ export function addActiveSkill(activeSkill: ActiveSkill): AddActiveSkillProps {
     activeSkill: activeSkill
   };
 }
+
 export function removeActiveSkill(
   activeSkill: ActiveSkill
 ): RemoveActiveSkillProps {
