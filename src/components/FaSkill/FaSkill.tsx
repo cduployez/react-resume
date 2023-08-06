@@ -28,7 +28,6 @@ function FaSkill(props: FaSkillProps) {
       contentElement={faIconElement()}
       skillEnum={props.item.skillEnum}
       childrenKeywords={props.item.childrenKeywords}
-      iconClassName={messages.optionalClass(props.item.skillEnum)}
     />
   );
 }

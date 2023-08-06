@@ -25,7 +25,7 @@
   }
 
   .icon.#{$badgeClassName}:hover,
-  .icon.#{$badgeClassName}.active {
+  .icon.active.#{$badgeClassName} {
     --on-icon-hover: #{$hoverTextColor};
     --icon-hover: #{$hoverBackgroundColor};
 
@@ -45,70 +45,70 @@
 
 @include badgeColor(java, theme-variables.$on-java, theme-variables.$java);
 @include badgeColor(
-                cplusplus,
-                theme-variables.$on-cplusplus,
-                theme-variables.$cplusplus
+  cplusplus,
+  theme-variables.$on-cplusplus,
+  theme-variables.$cplusplus
 );
 @include badgeColor(
-                csharp,
-                theme-variables.$on-csharp,
-                theme-variables.$csharp
+  csharp,
+  theme-variables.$on-csharp,
+  theme-variables.$csharp
 );
 @include badgeColor(
-                spring,
-                theme-variables.$on-spring,
-                theme-variables.$spring
+  spring,
+  theme-variables.$on-spring,
+  theme-variables.$spring
 );
 @include badgeColor(
-                angular,
-                theme-variables.$on-angular,
-                theme-variables.$angular
+  angular,
+  theme-variables.$on-angular,
+  theme-variables.$angular
 );
 @include badgeColor(
-                python,
-                theme-variables.$on-python,
-                theme-variables.$python
+  python,
+  theme-variables.$on-python,
+  theme-variables.$python
 );
 @include badgeColor(
-                android,
-                theme-variables.$on-android,
-                theme-variables.$android
+  android,
+  theme-variables.$on-android,
+  theme-variables.$android
 );
 @include badgeColor(html, theme-variables.$on-html, theme-variables.$html);
 @include badgeColor(css, theme-variables.$on-css, theme-variables.$css);
 @include badgeShapeColor(
-                javascript,
-                theme-variables.$on-javascript,
-                theme-variables.$javascript
+  javascript,
+  theme-variables.$on-javascript,
+  theme-variables.$javascript
 );
 @include badgeShapeColor(
-                typescript,
-                theme-variables.$on-typescript,
-                theme-variables.$typescript
+  typescript,
+  theme-variables.$on-typescript,
+  theme-variables.$typescript
 );
 @include badgeColor(
-                keycloak,
-                theme-variables.$on-keycloak,
-                theme-variables.$keycloak
+  keycloak,
+  theme-variables.$on-keycloak,
+  theme-variables.$keycloak
 );
 @include badgeColor(mysql, theme-variables.$on-mysql, theme-variables.$mysql);
 @include badgeColor(
-                mongodb,
-                theme-variables.$on-mongodb,
-                theme-variables.$mongodb
+  mongodb,
+  theme-variables.$on-mongodb,
+  theme-variables.$mongodb
 );
 @include badgeColor(
-                docker,
-                theme-variables.$on-docker,
-                theme-variables.$docker
+  docker,
+  theme-variables.$on-docker,
+  theme-variables.$docker
 );
 @include badgeColor(
-                kubernetes,
-                theme-variables.$on-kubernetes,
-                theme-variables.$kubernetes
+  kubernetes,
+  theme-variables.$on-kubernetes,
+  theme-variables.$kubernetes
 );
 @include badgeColor(
-                gitlab,
-                theme-variables.$on-gitlab,
-                theme-variables.$gitlab
+  gitlab,
+  theme-variables.$on-gitlab,
+  theme-variables.$gitlab
 );
