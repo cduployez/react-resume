@@ -30,10 +30,17 @@ function Formations(): React.JSX.Element {
       new FormationsHttpService(configService);
 
     setLoading(true);
-    formationsHttpService.findAll().then((formations: FormationDto[]) => {
-      setFormations(formations);
-      setLoading(false);
-    });
+    formationsHttpService
+      .findAll()
+      .then((formations: FormationDto[]) => {
+        setFormations(formations);
+      })
+      .catch(() => {
+        setFormations([]);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   function formationElement(formation: FormationDto): React.JSX.Element {

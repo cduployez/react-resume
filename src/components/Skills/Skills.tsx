@@ -47,9 +47,11 @@ function Skills(): React.JSX.Element {
         setSkillGroups(
           SkillGroupMapper.fromSkillGroupDtos(skillGroups, iconsService)
         );
-        setLoading(false);
       })
       .catch(() => {
+        setSkillGroups([]);
+      })
+      .finally(() => {
         setLoading(false);
       });
   }, []);
@@ -60,11 +62,23 @@ function Skills(): React.JSX.Element {
   ): React.JSX.Element | null {
     switch (skill.skillTypeEnum) {
       case SkillTypeEnum.FA:
-        return <FaSkill key={skillKey} item={skill as FaSkillItem} />;
+        return (
+          <div key={skillKey}>
+            <FaSkill item={skill as FaSkillItem} />
+          </div>
+        );
       case SkillTypeEnum.JS:
-        return <JsSkill key={skillKey} item={skill as JsSkillItem} />;
+        return (
+          <div key={skillKey}>
+            <JsSkill item={skill as JsSkillItem} />
+          </div>
+        );
       case SkillTypeEnum.TEXT:
-        return <TextSkill key={skillKey} item={skill as TextSkillItem} />;
+        return (
+          <div key={skillKey}>
+            <TextSkill item={skill as TextSkillItem} />
+          </div>
+        );
     }
     return null;
   }
@@ -77,7 +91,7 @@ function Skills(): React.JSX.Element {
   function skillGroupElement(skillGroup: SkillGroup): React.JSX.Element {
     return (
       <>
-        <p>{skillGroup.title}</p>
+        <p className={styles.skillTitle}>{skillGroup.title}</p>
         <div className={styles.rowContainer}>
           <div className={styles.row}>{skillsElements(skillGroup.skills)}</div>
         </div>
