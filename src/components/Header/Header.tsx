@@ -26,24 +26,35 @@ function Header(): React.JSX.Element {
     string[]
   >([]);
 
+  function onError(): void {
+    setProfile(null);
+    setLeftInfoList([]);
+    setRightInfoList([]);
+  }
+
   useEffect(() => {
     const profileHttpService: ProfileHttpService = new ProfileHttpService(
       configService
     );
 
     setLoading(true);
-    profileHttpService.get().then((profile: ProfileDto) => {
-      setProfile(profile);
-      if (profile) {
-        setLeftInfoList([`${profile.age} ans`, profile.city || '']);
+    profileHttpService
+      .get()
+      .then((profile: ProfileDto) => {
+        setProfile(profile);
+        if (profile) {
+          setLeftInfoList([`${profile.age} ans`, profile.city || '']);
 
-        setRightInfoList(profile.meansOfTransport);
-      } else {
-        setLeftInfoList([]);
-        setRightInfoList([]);
-      }
-      setLoading(false);
-    });
+          setRightInfoList(profile.meansOfTransport);
+        } else {
+          onError();
+        }
+        setLoading(false);
+      })
+      .catch(onError)
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   function toLiElements(infoList: string[]): React.JSX.Element[] {

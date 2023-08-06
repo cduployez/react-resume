@@ -31,10 +31,17 @@ function Languages(): React.JSX.Element {
     );
 
     setLoading(true);
-    languagesHttpService.findAll().then((languages: LanguageDto[]) => {
-      setLanguages(languages);
-      setLoading(false);
-    });
+    languagesHttpService
+      .findAll()
+      .then((languages: LanguageDto[]) => {
+        setLanguages(languages);
+      })
+      .catch(() => {
+        setLanguages([]);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   function languageElement(language: LanguageDto): React.JSX.Element {

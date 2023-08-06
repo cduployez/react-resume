@@ -20,11 +20,11 @@
 }
 
 @media (max-width: variables.$tablet-width) {
-  main {
+  .App {
     padding: 0 5% 5rem;
 
     .columns {
-      div {
+      .column {
         width: 100%;
       }
     }
@@ -36,7 +36,7 @@
 }
 
 @media (max-width: variables.$phone-width) {
-  main {
+  .App {
     padding: 0 2% 5rem;
   }
 }

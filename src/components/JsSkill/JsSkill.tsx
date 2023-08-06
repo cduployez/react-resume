@@ -6,7 +6,7 @@ interface JsSkillProps {
   item: JsSkillItem;
 }
 
-function JsSkill(props: JsSkillProps) {
+function JsSkill(props: JsSkillProps): React.JSX.Element {
   function textIconElement(): React.JSX.Element {
     return (
       <div className={styles.icon}>
@@ -19,6 +19,7 @@ function JsSkill(props: JsSkillProps) {
     <Skill
       title={props.item.title}
       contentElement={textIconElement()}
+      skillEnum={props.item.skillEnum}
       childrenKeywords={props.item.childrenKeywords}
     />
   );
