@@ -31,7 +31,7 @@
     "web-vitals": "^3.4.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:production",
     "deploy": "gh-pages -d build",
     "start": "PORT=11002 env-cmd -f local.env react-scripts start",
     "build": "react-scripts build",
