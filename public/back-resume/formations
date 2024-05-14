@@ -1,0 +1,37 @@
+[
+    {
+        "dateRange": {
+            "beginDate": "2015-01-01T00:00:00Z",
+            "endDate": "2017-01-01T00:00:00Z",
+            "dateRangeType": "YEAR"
+        },
+        "title": "ISEN Lille - Ecole d'ingénieur",
+        "descriptions": [
+            "Spécialisé en Développement Logiciel et Big Data",
+            "Contrat de professionnalisation"
+        ]
+    },
+    {
+        "dateRange": {
+            "beginDate": "2012-01-01T00:00:00Z",
+            "endDate": "2015-01-01T00:00:00Z",
+            "dateRangeType": "YEAR"
+        },
+        "title": "ISEN Lille - Ecole d'ingénieur",
+        "descriptions": [
+            "Cycle Informatique et Réseaux, Diplômé Bachelor ISEN"
+        ]
+    },
+    {
+        "dateRange": {
+            "beginDate": "2009-01-01T00:00:00Z",
+            "endDate": "2012-01-01T00:00:00Z",
+            "dateRangeType": "YEAR"
+        },
+        "title": "Institut de Genech",
+        "descriptions": [
+            "Baccalauréat Série Scientifique, Mention Très Bien",
+            "Section Européenne"
+        ]
+    }
+]

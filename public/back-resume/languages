@@ -1,0 +1,24 @@
+[
+    {
+        "dateRange": {
+            "beginDate": "2017-01-01T00:00:00Z",
+            "endDate": "2017-01-01T00:00:00Z",
+            "dateRangeType": "YEAR"
+        },
+        "title": "TOEIC",
+        "descriptions": [
+            "Score : 975"
+        ]
+    },
+    {
+        "dateRange": {
+            "beginDate": "2011-01-01T00:00:00Z",
+            "endDate": "2011-01-01T00:00:00Z",
+            "dateRangeType": "YEAR"
+        },
+        "title": "First Certificate in English",
+        "descriptions": [
+            "Grade A, Niveau Européen C1"
+        ]
+    }
+]

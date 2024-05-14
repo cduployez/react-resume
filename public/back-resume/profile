@@ -1,0 +1,16 @@
+{
+    "firstName": "Clément",
+    "lastName": "Duployez",
+    "email": "c.duployez+resume@gmail.com",
+    "birthDate": "1994-07-05",
+    "city": "Lillois",
+    "meansOfTransport": [
+        "Permis B (Véhicule)",
+        "Télétravail"
+    ],
+    "goals": [
+        "Développement logiciel en équipe",
+        "Evolution souhaitée vers l'expertise technique"
+    ],
+    "position": "Ingénieur Etudes et Développement - Fullstack"
+}
