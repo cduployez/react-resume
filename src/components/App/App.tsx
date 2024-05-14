@@ -1,34 +1,37 @@
 import React from 'react';
-import styles from './App.module.scss';
-import Header from '../Header/Header';
-import MenuBar from '../MenuBar/MenuBar';
+import ThemeProvider from '../../providers/ThemeProvider';
 import Experiences from '../Experiences/Experiences';
 import Formations from '../Formations/Formations';
-import Languages from '../Languages/Languages';
+import Header from '../Header/Header';
 import Hobbies from '../Hobbies/Hobbies';
+import Languages from '../Languages/Languages';
+import MenuBar from '../MenuBar/MenuBar';
 import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
+import styles from './App.module.scss';
 
 function App(): React.JSX.Element {
   return (
-    <>
-      <MenuBar />
-      <main className={styles.App} data-testid="app-main">
-        <Header />
-        <div className={styles.columns}>
-          <div className={styles.column}>
-            <Experiences />
-            <Projects />
+    <ThemeProvider>
+      <>
+        <MenuBar />
+        <main className={styles.App} data-testid="app-main">
+          <Header />
+          <div className={styles.columns}>
+            <div className={styles.column}>
+              <Experiences />
+              <Projects />
+            </div>
+            <div className={styles.column}>
+              <Formations />
+              <Skills />
+              <Languages />
+              <Hobbies />
+            </div>
           </div>
-          <div className={styles.column}>
-            <Formations />
-            <Skills />
-            <Languages />
-            <Hobbies />
-          </div>
-        </div>
-      </main>
-    </>
+        </main>
+      </>
+    </ThemeProvider>
   );
 }
 
