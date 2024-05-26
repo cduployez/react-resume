@@ -1,0 +1,438 @@
+[
+    {
+        "dateRange": {
+            "beginDate": "2022-10-01T00:00:00Z",
+            "endDate": null,
+            "dateRangeType": "MONTH"
+        },
+        "company": "Worldline",
+        "jobType": "CDI",
+        "project": "Projet Ecobonus",
+        "descriptions": [
+            "Lead Developer au service d'un projet local et écologique visant à changer les habitudes des automobilistes"
+        ],
+        "skills": [
+            {
+                "title": "Java",
+                "keywords": [
+                    "JAVA"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Spring Boot",
+                "keywords": [
+                    "SPRING"
+                ],
+                "childrenKeywords": [
+                    "JAVA"
+                ]
+            },
+            {
+                "title": "Angular 15",
+                "keywords": [
+                    "ANGULAR"
+                ],
+                "childrenKeywords": [
+                    "TYPESCRIPT",
+                    "CSS",
+                    "HTML"
+                ]
+            },
+            {
+                "title": "Docker",
+                "keywords": [
+                    "DOCKER"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Kubernetes",
+                "keywords": [
+                    "KUBERNETES"
+                ],
+                "childrenKeywords": [
+                    "DOCKER"
+                ]
+            },
+            {
+                "title": "Openshift",
+                "keywords": [
+                    "OPENSHIFT"
+                ],
+                "childrenKeywords": [
+                    "DOCKER",
+                    "KUBERNETES"
+                ]
+            },
+            {
+                "title": "Kafka",
+                "keywords": [],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Etat d'esprit agile",
+                "keywords": [],
+                "childrenKeywords": []
+            }
+        ]
+    },
+    {
+        "dateRange": {
+            "beginDate": "2021-07-01T00:00:00Z",
+            "endDate": "2022-09-30T00:00:00Z",
+            "dateRangeType": "MONTH"
+        },
+        "company": "Worldline",
+        "jobType": "CDI",
+        "project": "Projet Maela",
+        "descriptions": [
+            "Lead Developer au sein d'une équipe internationale en méthode agile, développement d'une solution de télésuivi médical pour professionnels de santé et patients"
+        ],
+        "skills": [
+            {
+                "title": "Java",
+                "keywords": [
+                    "JAVA"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Spring Boot",
+                "keywords": [
+                    "SPRING"
+                ],
+                "childrenKeywords": [
+                    "JAVA"
+                ]
+            },
+            {
+                "title": "Angular 11",
+                "keywords": [
+                    "ANGULAR"
+                ],
+                "childrenKeywords": [
+                    "TYPESCRIPT",
+                    "CSS",
+                    "HTML"
+                ]
+            },
+            {
+                "title": "MySQL",
+                "keywords": [
+                    "MYSQL"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Docker",
+                "keywords": [
+                    "DOCKER"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Kubernetes",
+                "keywords": [
+                    "KUBERNETES"
+                ],
+                "childrenKeywords": [
+                    "DOCKER"
+                ]
+            },
+            {
+                "title": "Azure",
+                "keywords": [
+                    "AZURE"
+                ],
+                "childrenKeywords": [
+                    "DOCKER",
+                    "KUBERNETES"
+                ]
+            },
+            {
+                "title": "Etat d'esprit agile",
+                "keywords": [],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Anglais",
+                "keywords": [],
+                "childrenKeywords": []
+            }
+        ]
+    },
+    {
+        "dateRange": {
+            "beginDate": "2021-01-01T00:00:00Z",
+            "endDate": "2021-06-30T00:00:00Z",
+            "dateRangeType": "MONTH"
+        },
+        "company": "Worldline",
+        "jobType": "CDI",
+        "project": "Projet Dossier Médical Partagé",
+        "descriptions": [
+            "Interconnexion du Dossier Médical Partagé avec l'Espace Numérique de Santé"
+        ],
+        "skills": [
+            {
+                "title": "Java",
+                "keywords": [
+                    "JAVA"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Spring Boot",
+                "keywords": [
+                    "SPRING"
+                ],
+                "childrenKeywords": [
+                    "JAVA"
+                ]
+            },
+            {
+                "title": "Apache Tapestry",
+                "keywords": [
+                    "APACHE_TAPESTRY"
+                ],
+                "childrenKeywords": [
+                    "HTML",
+                    "CSS",
+                    "JAVA"
+                ]
+            }
+        ]
+    },
+    {
+        "dateRange": {
+            "beginDate": "2018-01-01T00:00:00Z",
+            "endDate": "2020-12-31T00:00:00Z",
+            "dateRangeType": "MONTH"
+        },
+        "company": "Worldline",
+        "jobType": "CDI",
+        "project": "Projet SI-VIC",
+        "descriptions": [
+            "Lead Developer au sein d'une équipe en méthode agile, développement d'une solution d'aide aux victimes en cas d'événements majeurs sur le territoire Français",
+            "Gestion et amélioration pendant la crise Covid-19 : dénombrement quotidien, suivi et analyse des parcours de soins des patients dans les hôpitaux"
+        ],
+        "skills": [
+            {
+                "title": "Java",
+                "keywords": [
+                    "JAVA"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Spring 5",
+                "keywords": [
+                    "SPRING"
+                ],
+                "childrenKeywords": [
+                    "JAVA"
+                ]
+            },
+            {
+                "title": "Keycloak",
+                "keywords": [
+                    "KEYCLOAK"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Angular 8",
+                "keywords": [
+                    "ANGULAR"
+                ],
+                "childrenKeywords": [
+                    "TYPESCRIPT",
+                    "CSS",
+                    "HTML"
+                ]
+            },
+            {
+                "title": "MySQL",
+                "keywords": [
+                    "MYSQL"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Etat d'esprit agile",
+                "keywords": [],
+                "childrenKeywords": []
+            }
+        ]
+    },
+    {
+        "dateRange": {
+            "beginDate": "2017-09-01T00:00:00Z",
+            "endDate": "2017-12-31T00:00:00Z",
+            "dateRangeType": "MONTH"
+        },
+        "company": "Worldline",
+        "jobType": "CDI",
+        "project": "Projet Télépaiement",
+        "descriptions": [
+            "Mise en place du télépaiement des forfaits de post-stationnement"
+        ],
+        "skills": [
+            {
+                "title": "Java",
+                "keywords": [
+                    "JAVA"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Java EE",
+                "keywords": [
+                    "JAVA_EE"
+                ],
+                "childrenKeywords": [
+                    "JAVA"
+                ]
+            },
+            {
+                "title": "Web",
+                "keywords": [
+                    "HTML",
+                    "CSS",
+                    "JAVASCRIPT"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "MySQL",
+                "keywords": [
+                    "MYSQL"
+                ],
+                "childrenKeywords": []
+            }
+        ]
+    },
+    {
+        "dateRange": {
+            "beginDate": "2016-09-01T00:00:00Z",
+            "endDate": "2017-08-31T00:00:00Z",
+            "dateRangeType": "MONTH"
+        },
+        "company": "Worldline",
+        "jobType": "ALTERNANCE",
+        "project": "Projets Datadock, Saveurs & Vie ; Sujets de R&D",
+        "descriptions": [
+            "Assistant développeur sur différents projets de dématérialisation"
+        ],
+        "skills": [
+            {
+                "title": "Java",
+                "keywords": [
+                    "JAVA"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Spring Boot",
+                "keywords": [
+                    "SPRING"
+                ],
+                "childrenKeywords": [
+                    "JAVA"
+                ]
+            },
+            {
+                "title": "Keycloak",
+                "keywords": [
+                    "KEYCLOAK"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Angular 2",
+                "keywords": [
+                    "ANGULAR"
+                ],
+                "childrenKeywords": [
+                    "TYPESCRIPT",
+                    "CSS",
+                    "HTML"
+                ]
+            },
+            {
+                "title": "Ionic 2",
+                "keywords": [
+                    "ANGULAR"
+                ],
+                "childrenKeywords": [
+                    "TYPESCRIPT",
+                    "CSS",
+                    "HTML"
+                ]
+            },
+            {
+                "title": "MongoDB",
+                "keywords": [
+                    "MONGODB"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Docker",
+                "keywords": [
+                    "DOCKER"
+                ],
+                "childrenKeywords": []
+            }
+        ]
+    },
+    {
+        "dateRange": {
+            "beginDate": "2016-05-01T00:00:00Z",
+            "endDate": "2016-07-31T00:00:00Z",
+            "dateRangeType": "MONTH"
+        },
+        "company": "Intelligent Solutions",
+        "jobType": "STAGE",
+        "project": "Projet IMail",
+        "descriptions": [
+            "Développement de modules et optimisation pour la solution d'emailing professionnel IMAIL"
+        ],
+        "skills": [
+            {
+                "title": "C#",
+                "keywords": [
+                    "C_SHARP"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "MVC .Net",
+                "keywords": [
+                    "MVC_NET"
+                ],
+                "childrenKeywords": [
+                    "C_SHARP",
+                    "HTML"
+                ]
+            },
+            {
+                "title": "Web",
+                "keywords": [
+                    "HTML",
+                    "CSS",
+                    "JAVASCRIPT"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "MySQL",
+                "keywords": [
+                    "MYSQL"
+                ],
+                "childrenKeywords": []
+            }
+        ]
+    }
+]

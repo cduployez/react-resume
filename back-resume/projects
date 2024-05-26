@@ -1,0 +1,115 @@
+[
+    {
+        "project": "TwinMax",
+        "teamSize": 5,
+        "descriptions": [
+            "Application Android de calcul et affichage de courbes en temps réel afin de calibrer les carburateurs d’une moto pour l’entreprise Selectronic"
+        ],
+        "skills": [
+            {
+                "title": "Android 5",
+                "keywords": [
+                    "ANDROID"
+                ],
+                "childrenKeywords": [
+                    "JAVA"
+                ]
+            }
+        ]
+    },
+    {
+        "project": "MatchFM",
+        "teamSize": 4,
+        "descriptions": [
+            "Application Android de rencontre de personnes autour des recommandations musicales"
+        ],
+        "skills": [
+            {
+                "title": "Xamarin",
+                "keywords": [
+                    "XAMARIN"
+                ],
+                "childrenKeywords": [
+                    "C_SHARP",
+                    "ANDROID"
+                ]
+            },
+            {
+                "title": ".NET",
+                "keywords": [
+                    "NET"
+                ],
+                "childrenKeywords": [
+                    "C_SHARP"
+                ]
+            }
+        ]
+    },
+    {
+        "project": "Rubik Pixel Art Solver",
+        "teamSize": 5,
+        "descriptions": [
+            "Robot de scan et reproduction d'images avec des Rubik's Cubes"
+        ],
+        "skills": [
+            {
+                "title": "Python",
+                "keywords": [
+                    "PYTHON"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "OpenCV",
+                "keywords": [],
+                "childrenKeywords": [
+                    "PYTHON"
+                ]
+            }
+        ]
+    },
+    {
+        "project": "Traveling Bradeux Problem Solver",
+        "teamSize": 3,
+        "descriptions": [
+            "Planification de tournées sur Google Maps"
+        ],
+        "skills": [
+            {
+                "title": "HTML",
+                "keywords": [
+                    "HTML"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "CSS",
+                "keywords": [
+                    "CSS"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "JavaScript",
+                "keywords": [
+                    "JAVASCRIPT"
+                ],
+                "childrenKeywords": []
+            },
+            {
+                "title": "Google Maps",
+                "keywords": [],
+                "childrenKeywords": [
+                    "JAVASCRIPT"
+                ]
+            },
+            {
+                "title": "C++",
+                "keywords": [
+                    "C_PLUS_PLUS"
+                ],
+                "childrenKeywords": []
+            }
+        ]
+    }
+]

@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ddbd598b.css",
+    "main.js": "/static/js/main.cb289d13.js",
+    "static/js/496.cfb94057.chunk.js": "/static/js/496.cfb94057.chunk.js",
+    "static/media/Gudea-Italic.ttf": "/static/media/Gudea-Italic.600f7a3a98627256e600.ttf",
+    "static/media/Gudea-Regular.ttf": "/static/media/Gudea-Regular.42041be375b8b16e9ba4.ttf",
+    "static/media/Gudea-Bold.ttf": "/static/media/Gudea-Bold.37019f365c2f7ed28fba.ttf",
+    "index.html": "/index.html",
+    "main.ddbd598b.css.map": "/static/css/main.ddbd598b.css.map",
+    "main.cb289d13.js.map": "/static/js/main.cb289d13.js.map",
+    "496.cfb94057.chunk.js.map": "/static/js/496.cfb94057.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddbd598b.css",
+    "static/js/main.cb289d13.js"
+  ]
+}

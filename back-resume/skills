@@ -1,0 +1,114 @@
+[
+    {
+        "title": "Langages & Frameworks",
+        "skills": [
+            {
+                "title": "Java",
+                "keyword": "JAVA",
+                "childrenKeywords": []
+            },
+            {
+                "title": "Spring Boot",
+                "keyword": "SPRING",
+                "childrenKeywords": [
+                    "JAVA"
+                ]
+            },
+            {
+                "title": "C++",
+                "keyword": "C_PLUS_PLUS",
+                "childrenKeywords": []
+            },
+            {
+                "title": "C#",
+                "keyword": "C_SHARP",
+                "childrenKeywords": []
+            },
+            {
+                "title": "Python",
+                "keyword": "PYTHON",
+                "childrenKeywords": []
+            },
+            {
+                "title": "Android",
+                "keyword": "ANDROID",
+                "childrenKeywords": [
+                    "JAVA"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Web",
+        "skills": [
+            {
+                "title": "Angular",
+                "keyword": "ANGULAR",
+                "childrenKeywords": [
+                    "TYPESCRIPT",
+                    "CSS",
+                    "HTML"
+                ]
+            },
+            {
+                "title": "HTML",
+                "keyword": "HTML",
+                "childrenKeywords": []
+            },
+            {
+                "title": "CSS",
+                "keyword": "CSS",
+                "childrenKeywords": []
+            },
+            {
+                "title": "JavaScript",
+                "keyword": "JAVASCRIPT",
+                "childrenKeywords": []
+            },
+            {
+                "title": "TypeScript",
+                "keyword": "TYPESCRIPT",
+                "childrenKeywords": [
+                    "JAVASCRIPT"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Divers",
+        "skills": [
+            {
+                "title": "Gitlab-CI",
+                "keyword": "GITLAB_CI",
+                "childrenKeywords": []
+            },
+            {
+                "title": "Docker",
+                "keyword": "DOCKER",
+                "childrenKeywords": []
+            },
+            {
+                "title": "Kubernetes",
+                "keyword": "KUBERNETES",
+                "childrenKeywords": [
+                    "DOCKER"
+                ]
+            },
+            {
+                "title": "Keycloak",
+                "keyword": "KEYCLOAK",
+                "childrenKeywords": []
+            },
+            {
+                "title": "MySQL",
+                "keyword": "MYSQL",
+                "childrenKeywords": []
+            },
+            {
+                "title": "MongoDB",
+                "keyword": "MONGODB",
+                "childrenKeywords": []
+            }
+        ]
+    }
+]
